@@ -14,7 +14,7 @@ const examples = {
   'example3':
       'Scepticism was as much the result of knowledge, as knowledge is of scepticism.',
   'example4':
-      'Alice was beginning to get very.',
+      'Alice was beginning to get very tired of sitting by her sister on the bank.',
   'example5':
       'Buda-Pesth is Dracula!.',
   'example6':
