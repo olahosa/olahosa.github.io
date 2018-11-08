@@ -8,17 +8,17 @@ const HOSTED_URLS = {
 
 const examples = {
   'example1':
-      'Alice was beginning to get very tired of sitting by her sister on the bank.',
+      'It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife',
   'example2':
-      'Buda-Pesth seems a wonderful place.',
+      'Darcy, as well as Elizabeth, really loved them; and they were both ever sensible of the warmest gratitude towards the persons who, by bringing her into Derbyshire, had been the means of uniting them',
   'example3':
-      'Scepticism was as much the result of knowledge, as knowledge is of scepticism.',
+      'Happy families are all alike; every unhappy family is unhappy in its own way',
   'example4':
-      'Alice was beginning to get very tired of sitting by her sister on the bank.',
+      'but my life now, my whole life apart from anything that can happen to me, every minute of it is no more meaningless, as it was before, but it has the positive meaning of goodness, which I have the power to put into it',
   'example5':
-      'Buda-Pesth is Dracula!.',
+      'Thirty years ago, Marseilles lay burning in the sun, one day',
   'example6':
-      'Scepticism was as much the result of knowledge, douche!.'    
+      'and as they passed along in sunshine and shade, the noisy and the eager, and the arrogant and the froward and the vain, fretted and chafed, and made their usual uproar'    
 };
 
 function status(statusText) {
