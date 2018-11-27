@@ -10,13 +10,13 @@ const examples = {
   'example1':
       'Happy families are all alike; every unhappy family is unhappy in its own way',
   'example2':
-      'but my life now, my whole life apart from anything that can happen to me, every minute of it is no more meaningless, as it was before, but it has the positive meaning of goodness, which I have the power to put into it',
-  'example3':
       'Thirty years ago, Marseilles lay burning in the sun, one day',
-  'example4':
-      'and as they passed along in sunshine and shade, the noisy and the eager, and the arrogant and the froward and the vain, fretted and chafed, and made their usual uproar',
-  'example5':
+  'example3':
       'It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife',
+  'example4':
+      'but my life now, my whole life apart from anything that can happen to me, every minute of it is no more meaningless, as it was before, but it has the positive meaning of goodness, which I have the power to put into it',
+  'example5':
+      'and as they passed along in sunshine and shade, the noisy and the eager, and the arrogant and the froward and the vain, fretted and chafed, and made their usual uproar',
   'example6':
       'Darcy, as well as Elizabeth, really loved them; and they were both ever sensible of the warmest gratitude towards the persons who, by bringing her into Derbyshire, had been the means of uniting them'
 };
