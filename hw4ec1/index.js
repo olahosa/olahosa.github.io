@@ -10,7 +10,7 @@ const examples = {
   'example1':
       'dark blue',
   'example2':
-      'orange red',
+      'mellow yellow',
   'example3':
       'desert sand'
 };
