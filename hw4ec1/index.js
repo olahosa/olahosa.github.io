@@ -59,7 +59,7 @@ function doPredict(predict) {
   //g = Math.floor(Math.random() * 255) + 1;
   //b = Math.floor(Math.random() * 255) + 1;
   status(
-      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms ' + bubu);
+      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms ');
  
   //Width and height
   var w = 400;
@@ -148,7 +148,7 @@ class Classifier {
     // Convert to lower case and remove all punctuations.
     //const inputText =
     //    text.trim().toLowerCase().replace(/(\.|\,|\!)/g, '').split(' ');
-    const inputText = text.trim().toLowerCase()
+    const inputText = text.trim().toLowerCase();
     // Look up word indices.
     const inputBuffer = tf.buffer([1, this.maxLen], 'float32');
     
@@ -175,7 +175,7 @@ class Classifier {
     predictOut.dispose();
     const endMs = performance.now();
     
-    return {score: score, elapsed: (endMs - beginMs), txt: text, inpTxt: inputText, inpBuf: inputBuffer, bubu: this.wordIndex[word]};
+    return {score: score, elapsed: (endMs - beginMs), txt: text, inpTxt: inputText, inpBuf: inputBuffer};
   }
 };
 
