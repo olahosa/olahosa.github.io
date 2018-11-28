@@ -45,11 +45,11 @@ function doPredict(predict) {
   const result = predict(textField.value);
   score_string = "RGB prediction: ";
   
-  var r = Math.round(result.score[0] * 255)
-  var g = Math.round(result.score[1] * 255)
-  var b = Math.round(result.score[2] * 255)
+  var r = Math.round(result.score[0] * 255);
+  var g = Math.round(result.score[1] * 255);
+  var b = Math.round(result.score[2] * 255);
   
-  score_string += "R -> " + r + ", G -> " + g + ", B -> " + b + ","
+  score_string += "R -> " + r + ", G -> " + g + ", B -> " + b + ",";
   
   //for (var x in result.score) {
   //  score_string += x + " ->  " + result.score[x].toFixed(3) + ", "
@@ -152,17 +152,17 @@ class Classifier {
     // Look up word indices.
     const inputBuffer = tf.buffer([1, this.maxLen], 'float32');
     
-    var dummy = "str_"
+    var dummy = "str_";
     
     for (let i = 0; i < this.maxLen-inputText.length; ++i) {
       inputBuffer.set(0, 0, i);
-      dummy = dummy + " " + String(0)
+      dummy += " " + String(0);
     }
     for (let i = this.maxLen-inputText.length; i < inputText.length; ++i) {
       const word = inputText[i];
       inputBuffer.set(this.wordIndex[word], 0, i);
       //console.log(word, this.wordIndex[word], inputBuffer);
-      dummy = dummy + " " + string(this.wordIndex[word])
+      dummy += " " + string(this.wordIndex[word]);
     }
     const input = inputBuffer.toTensor();
     //console.log(input);
