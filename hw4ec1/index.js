@@ -45,13 +45,15 @@ function doPredict(predict) {
   const result = predict(textField.value);
   score_string = "Class scores: ";
   
-  r = result.score[0]
-  g = result.score[1]
-  b = result.score[2]
+  var r = Math.round(result.score[0] * 255)
+  var g = Math.round(result.score[1] * 255)
+  var b = Math.round(result.score[2] * 255)
   
-  for (var x in result.score) {
-    score_string += x + " ->  " + result.score[x].toFixed(3) + ", "
-  }
+  score_string += "R: " + r + ", G: " + g + ", B: " + b + ","
+  
+  //for (var x in result.score) {
+  //  score_string += x + " ->  " + result.score[x].toFixed(3) + ", "
+  //}
   //console.log(score_string);
   //r = Math.floor(Math.random() * 255) + 1;
   //g = Math.floor(Math.random() * 255) + 1;
