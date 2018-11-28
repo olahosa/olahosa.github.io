@@ -57,7 +57,7 @@ function doPredict(predict) {
   //g = Math.floor(Math.random() * 255) + 1;
   //b = Math.floor(Math.random() * 255) + 1;
   status(
-      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)' + r + g + b);
+      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)' + r + g + b + result.score);
  
   //Width and height
   var w = 400;
