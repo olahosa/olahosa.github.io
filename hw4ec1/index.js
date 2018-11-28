@@ -43,13 +43,13 @@ function disableLoadModelButtons() {
 function doPredict(predict) {
   const textField = document.getElementById('text-entry');
   const result = predict(textField.value);
-  score_string = "Class scores: ";
+  score_string = "RGB prediction: ";
   
   var r = Math.round(result.score[0] * 255)
   var g = Math.round(result.score[1] * 255)
   var b = Math.round(result.score[2] * 255)
   
-  score_string += "R: " + r + ", G: " + g + ", B: " + b + ","
+  score_string += "R -> " + r + ", G -> " + g + ", B -> " + b + ","
   
   //for (var x in result.score) {
   //  score_string += x + " ->  " + result.score[x].toFixed(3) + ", "
@@ -59,7 +59,7 @@ function doPredict(predict) {
   //g = Math.floor(Math.random() * 255) + 1;
   //b = Math.floor(Math.random() * 255) + 1;
   status(
-      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)' + r + g + b + result.txt + result.inpTxt);
+      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms');
  
   //Width and height
   var w = 400;
