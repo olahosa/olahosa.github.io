@@ -154,11 +154,11 @@ class Classifier {
     
     //dummy = "str_";
     
-    for (let i = 0; i < this.maxLen-inputText.length; ++i) {
-      inputBuffer.set(0, 0, i);
+    //for (let i = 0; i < this.maxLen-inputText.length; ++i) {
+      //inputBuffer.set(0, 0, i);
       //dummy += " " + String(0);
-    }
-    for (let i = this.maxLen-inputText.length; i < inputText.length; ++i) {
+    //}
+    for (let i = this.maxLen-inputText.length; i < this.maxLen; ++i) {
       const word = inputText[i];
       inputBuffer.set(this.wordIndex[word], 0, i);
       //console.log(word, this.wordIndex[word], inputBuffer);
