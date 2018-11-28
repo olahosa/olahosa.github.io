@@ -57,7 +57,7 @@ function doPredict(predict) {
   //g = Math.floor(Math.random() * 255) + 1;
   //b = Math.floor(Math.random() * 255) + 1;
   status(
-      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)' + r + g + b + result.score);
+      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)' + r + g + b + result.txt + result.inpTxt);
  
   //Width and height
   var w = 400;
@@ -164,7 +164,7 @@ class Classifier {
     predictOut.dispose();
     const endMs = performance.now();
 
-    return {score: score, elapsed: (endMs - beginMs)};
+    return {score: score, elapsed: (endMs - beginMs), txt: text, inpTxt: inputText};
   }
 };
 
