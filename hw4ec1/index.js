@@ -59,7 +59,7 @@ function doPredict(predict) {
   //g = Math.floor(Math.random() * 255) + 1;
   //b = Math.floor(Math.random() * 255) + 1;
   status(
-      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms' + dummy);
+      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms ' + dummy + " " + bubu);
  
   //Width and height
   var w = 400;
@@ -162,7 +162,7 @@ class Classifier {
       const word = inputText[i];
       inputBuffer.set(this.wordIndex[word], 0, i);
       //console.log(word, this.wordIndex[word], inputBuffer);
-      dummy = dummy + " " + this.wordIndex[word]
+      dummy = dummy + " " + string(this.wordIndex[word])
     }
     const input = inputBuffer.toTensor();
     //console.log(input);
@@ -175,7 +175,7 @@ class Classifier {
     predictOut.dispose();
     const endMs = performance.now();
 
-    return {score: score, elapsed: (endMs - beginMs), txt: text, inpTxt: inputText, inpBuf: inputBuffer, dum: dummy};
+    return {score: score, elapsed: (endMs - beginMs), txt: text, inpTxt: inputText, inpBuf: inputBuffer, dum: dummy, bubu: this.wordIndex[word]};
   }
 };
 
