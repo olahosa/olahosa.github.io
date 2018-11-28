@@ -28,7 +28,7 @@
 					.attr("y", "0")
 	        .attr("width", w)
 					.attr("height", h)
-					.attr("fill", "powderblue");
+					.attr("fill", rgb(100, 0, 0));
 
     // Add initial circles
 
