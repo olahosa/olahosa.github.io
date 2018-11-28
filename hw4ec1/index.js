@@ -158,7 +158,7 @@ class Classifier {
       //inputBuffer.set(0, 0, i);
       //dummy += " " + String(0);
     //}
-    for (let i = this.maxLen-inputText.length; i < this.maxLen; ++i) {
+    for (let i = 0; i < inputText.length; ++i) {
       const word = inputText[i];
       inputBuffer.set(this.wordIndex[word], 0, i);
       //console.log(word, this.wordIndex[word], inputBuffer);
