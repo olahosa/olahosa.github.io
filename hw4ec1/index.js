@@ -55,8 +55,11 @@ function doPredict(predict) {
     score_string += x + " ->  " + result.score[x].toFixed(3) + ", "
   }
   //console.log(score_string);
+  r = Math.floor(Math.random() * 255) + 1;
+  g = Math.floor(Math.random() * 255) + 1;
+  b = Math.floor(Math.random() * 255) + 1;
   status(
-      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)');
+      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)' + r + g + b);
  
   //Width and height
   var w = 400;
@@ -69,13 +72,15 @@ function doPredict(predict) {
 	.append("svg")
 	.attr("width", w)
 	.attr("height", h);
+	
 
+	
   svg.append("rect")
 	.attr("x", "0")
 	.attr("y", "0")
 	.attr("width", w)
 	.attr("height", h)
-	.attr("fill", d3.rgb(100, 0, 0));
+	.attr("fill", d3.rgb(r, g, b));
 }
 
 function prepUI(predict) {
