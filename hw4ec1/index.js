@@ -44,13 +44,18 @@ function doPredict(predict) {
   const textField = document.getElementById('text-entry');
   const result = predict(textField.value);
   score_string = "Class scores: ";
+  
+  r = result.score[0]
+  g = result.score[1]
+  b = result.score[2]
+  
   for (var x in result.score) {
     score_string += x + " ->  " + result.score[x].toFixed(3) + ", "
   }
   //console.log(score_string);
-  r = Math.floor(Math.random() * 255) + 1;
-  g = Math.floor(Math.random() * 255) + 1;
-  b = Math.floor(Math.random() * 255) + 1;
+  //r = Math.floor(Math.random() * 255) + 1;
+  //g = Math.floor(Math.random() * 255) + 1;
+  //b = Math.floor(Math.random() * 255) + 1;
   status(
       score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)' + r + g + b);
  
@@ -65,8 +70,6 @@ function doPredict(predict) {
 	.append("svg")
 	.attr("width", w)
 	.attr("height", h);
-	
-
 	
   svg.append("rect")
 	.attr("x", "0")
