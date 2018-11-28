@@ -59,7 +59,7 @@ function doPredict(predict) {
   //g = Math.floor(Math.random() * 255) + 1;
   //b = Math.floor(Math.random() * 255) + 1;
   status(
-      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms' + result.score + result.inpBuf);
+      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms' + dummy);
  
   //Width and height
   var w = 400;
@@ -151,10 +151,18 @@ class Classifier {
     const inputText = text.trim().toLowerCase()
     // Look up word indices.
     const inputBuffer = tf.buffer([1, this.maxLen], 'float32');
+    
+    var dummy = "str_"
+    
+    for (let i = 0; i < this.maxLen-inputText.length; ++i) {
+      inputBuffer.set(0, 0, i);
+      dummy = dummy + " " + String(0)
+    }
     for (let i = this.maxLen-inputText.length; i < inputText.length; ++i) {
       const word = inputText[i];
       inputBuffer.set(this.wordIndex[word], 0, i);
       //console.log(word, this.wordIndex[word], inputBuffer);
+      dummy = dummy + " " + this.wordIndex[word]
     }
     const input = inputBuffer.toTensor();
     //console.log(input);
@@ -167,7 +175,7 @@ class Classifier {
     predictOut.dispose();
     const endMs = performance.now();
 
-    return {score: score, elapsed: (endMs - beginMs), txt: text, inpTxt: inputText, inpBuf: inputBuffer};
+    return {score: score, elapsed: (endMs - beginMs), txt: text, inpTxt: inputText, inpBuf: inputBuffer, dum: dummy};
   }
 };
 
