@@ -28,7 +28,7 @@
 					.attr("y", "0")
 	        .attr("width", w)
 					.attr("height", h)
-					.attr("fill", rgb(100, 0, 0));
+					.attr("fill", d3.rgb(100, 0, 0));
 
     // Add initial circles
 
