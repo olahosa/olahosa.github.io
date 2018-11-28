@@ -172,6 +172,6 @@ function draw() {
       ctx.fillRect(j * 25, i * 25, 25, 25);
     }
   }
-}
+}draw();
 
 setup();
