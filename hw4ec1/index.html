@@ -1,0 +1,55 @@
+
+<!doctype html>
+	
+<head>
+  <meta charset="utf-8">
+  <title>Try</title>
+  <script src="https://d3js.org/d3.v4.min.js"> ></script>
+</head>
+
+<body>
+  <style>
+    #textfield {
+      font-size: 120%;
+      width: 60%;
+      height: 200px;
+    }
+  </style>
+  <h1>
+    MEMEME
+  </h1>
+  <hr>
+  <div class="create-model">
+    <button id="load-model" style="display:none">Load model</button>
+  </div>
+  <div>
+    <div>
+      <span>Vocabulary size: </span>
+      <span id="vocabularySize"></span>
+    </div>
+    <div>
+      <span>Max length: </span>
+      <span id="maxLen"></span>
+    </div>
+  </div>
+  <hr>
+  <div>
+    <select id="example-select" class="form-control">
+      <option value="example1">color 1</option>
+      <option value="example2">color 2</option>
+      <option value="example3">color 3</option>
+    </select>
+  </div>
+  <div>
+    <textarea id="text-entry"></textarea>
+  </div>
+  <hr>
+  <div>
+    <span id="status">Standing by.</span>
+  </div>
+  
+  <div><canvas id="canvas" width="150" height="150"></canvas></div>
+
+  <script src='https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js'></script>
+  <script src='index.js'></script>
+</body>
