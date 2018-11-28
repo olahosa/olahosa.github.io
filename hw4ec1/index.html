@@ -1,5 +1,11 @@
 
 <!doctype html>
+	
+<head>
+  <meta charset="utf-8">
+  <title>Try</title>
+  <script src="https://d3js.org/d3.v4.min.js"> ></script>
+</head>
 
 <body>
   <style>
@@ -10,7 +16,7 @@
     }
   </style>
   <h1>
-    Who wrote that: Austen vs Dickens vs Tolstoy
+    Generate RBG values for a color name!
   </h1>
   <hr>
   <div class="create-model">
@@ -18,23 +24,16 @@
   </div>
   <div>
     <div>
-      <span>Vocabulary size: </span>
-      <span id="vocabularySize"></span>
-    </div>
-    <div>
-      <span>Max length: </span>
+      <span>Max length of color name: </span>
       <span id="maxLen"></span>
     </div>
   </div>
   <hr>
   <div>
     <select id="example-select" class="form-control">
-      <option value="example1">Class 0: Anna Karenina (Tolstoy) - 1st sentence in the book (in train set)</option>
-      <option value="example2">Class 1: Little Dorrit (Dickens) - 1st sentence in the book (in train set)</option>
-      <option value="example3">Class 2: Pride and Prejudice (Austen) - 1st sentence in the book (in train set)</option>
-      <option value="example4">Class 0: Anna Karenina (Tolstoy) - last sentence in the book (test)</option>
-      <option value="example5">Class 1: Little Dorrit (Dickens) - last sentence in the book (test)</option>
-      <option value="example6">Class 2: Pride and Prejudice (Austen) - last sentence in the book (test)</option>
+      <option value="example1">color 1</option>
+      <option value="example2">color 2</option>
+      <option value="example3">color 3</option>
     </select>
   </div>
   <div>
